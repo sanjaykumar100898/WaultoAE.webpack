@@ -1,0 +1,66 @@
+#nprogress .bar {
+    height: 4px !important;
+}
+
+.ql-editor {
+    min-height: 300px;
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.btn-primary {
+    font-weight: 500;
+     background-color: #292826;
+     border-color: black;
+    
+    }
+    .btn-primary:hover{
+        color: black;
+        font-weight: 500;
+        background-color:	#f9d342 ;
+    }
+    a{
+        font-family: 'Edo', arial;
+        color: black;
+    }
+    a:hover{
+        text-decoration: none;
+        color: rgb(77, 76, 76);
+    }
+    .btn-read{
+        font-weight: 500;
+        color: whitesmoke;
+        background-color: #292826;
+    }
+    .btn-read:hover{
+        font-weight: 500;
+       
+        background-color: whitesmoke;
+        color: black;
+        border-color: black;
+
+    }
+
+    .card-text{
+        font-weight: 400;
+    }
+
+    #header{
+        /* font-family: 'Edo', arial; */
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+        font-weight: 300;
+        color: white;
+    }
+    #header1{
+        font-size: medium;
+        color: white;
+        letter-spacing: 4px;
+    }
+
+/* .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #fdcc0d !important
+} */
