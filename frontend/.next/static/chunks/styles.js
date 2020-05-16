@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"],{
 
-/***/ "./node_modules/nprogress/nprogress.css":
-/*!**********************************************!*\
-  !*** ./node_modules/nprogress/nprogress.css ***!
-  \**********************************************/
+/***/ "./static/css/styles2.css":
+/*!********************************!*\
+  !*** ./static/css/styles2.css ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29,7 +29,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1589352132865");
+            injectCss(link, link.href.split("?")[0] + "?unix=1589608866274");
           });
       }
     }

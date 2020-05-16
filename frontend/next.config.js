@@ -1,6 +1,20 @@
 const withCSS = require('@zeit/next-css')
 
 module.exports = withCSS({
+    webpack(config) {
+        config.module.rules.push({
+          test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+          use: {
+            loader: 'url-loader',
+            options: {
+              limit: 100000,
+              name: '[name].[ext]'
+            }
+          }
+        });
+        return config;
+      },
+    
     publicRuntimeConfig: {
         APP_NAME: 'ALMOST EVERYTHING',
         API_DEVELOPMENT: 'http://localhost:8000/api',
@@ -13,8 +27,8 @@ module.exports = withCSS({
         
     }
     
+    
 });
-
 // const webpack = require('webpack')
 // const withCSS = require('@zeit/next-css')
 // const withPlugins = require('next-compose-plugins');

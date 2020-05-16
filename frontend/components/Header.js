@@ -21,8 +21,7 @@ import {
 } from 'reactstrap';
 import '.././node_modules/nprogress/nprogress.css';
 import Search from './blog/Search';
-
-
+import myImg1 from '../public/static/images/AE3.png' 
 
 Router.onRouteChangeStart = url => NProgress.start();
 Router.onRouteChangeComplete = url => NProgress.done();
@@ -38,6 +37,7 @@ const Header = () => {
   return (
     <React.Fragment>
       <Navbar id="header1" color="dark" light expand="md">
+      <img src="/AE3.png" alt="logo" width="75" height="60" />
         <Link href="/">
           <NavLink style={{ cursor: 'pointer' }} className="font-weight-bold">{APP_NAME}</NavLink>
         </Link>

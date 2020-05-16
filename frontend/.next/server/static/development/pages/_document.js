@@ -886,26 +886,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/document */ "./node_modules/next/document.js");
 /* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/config */ "next/config");
+/* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_config__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "D:\\Almost-Everything-master\\frontend\\pages\\_document.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
+const {
+  publicRuntimeConfig
+} = next_config__WEBPACK_IMPORTED_MODULE_2___default()();
+
 class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
+  setGoogleTags() {
+    if (publicRuntimeConfig.PRODUCTION) {
+      return {
+        __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'UA-166787503-1');
+        `
+      };
+    }
+  }
+
   render() {
     return __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Html"], {
       lang: "en",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 6,
+        lineNumber: 25,
         columnNumber: 7
       }
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 7,
+        lineNumber: 26,
         columnNumber: 9
       }
     }, __jsx("meta", {
@@ -913,7 +933,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 8,
+        lineNumber: 27,
         columnNumber: 11
       }
     }), __jsx("meta", {
@@ -922,7 +942,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 9,
+        lineNumber: 28,
         columnNumber: 11
       }
     }), __jsx("link", {
@@ -931,7 +951,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10,
+        lineNumber: 29,
         columnNumber: 11
       }
     }), __jsx("link", {
@@ -940,7 +960,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14,
+        lineNumber: 33,
         columnNumber: 11
       }
     }), __jsx("link", {
@@ -949,28 +969,55 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15,
+        lineNumber: 34,
+        columnNumber: 11
+      }
+    }), __jsx("link", {
+      href: "http://allfont.net/allfont.css?fonts=edo",
+      rel: "stylesheet",
+      type: "text/css",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37,
+        columnNumber: 11
+      }
+    }), __jsx("script", {
+      async: true,
+      src: "https://www.googletagmanager.com/gtag/js?id=UA-166787503-1",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38,
+        columnNumber: 11
+      }
+    }), __jsx("script", {
+      dangerouslySetInnerHTML: this.setGoogleTags(),
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39,
         columnNumber: 11
       }
     })), __jsx("body", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20,
+        lineNumber: 41,
         columnNumber: 9
       }
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21,
+        lineNumber: 42,
         columnNumber: 11
       }
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22,
+        lineNumber: 43,
         columnNumber: 11
       }
     })));
@@ -991,6 +1038,17 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
 
 module.exports = __webpack_require__(/*! private-next-pages/_document.js */"./pages/_document.js");
 
+
+/***/ }),
+
+/***/ "next/config":
+/*!******************************!*\
+  !*** external "next/config" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/config");
 
 /***/ }),
 
